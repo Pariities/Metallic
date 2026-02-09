@@ -8,7 +8,7 @@ COPY package*.json /app/
 
 RUN npm install -g pnpm
 
-RUN pnpm install
+RUN pnpm install --config.node-linker=hoisted
 
 RUN pnpm run build
 
